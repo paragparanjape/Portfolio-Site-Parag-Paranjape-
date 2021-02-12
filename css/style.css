@@ -102,6 +102,11 @@ selector {
 }
 .row {
   margin: 25px 0; /* 25px top and bottom, 0 left and right */
+  .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 }
 #work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
 #hero h1 {
@@ -127,3 +132,40 @@ nav > ul > li > a {
   width: 100%;
 }
 svg {width:5%;height:auto}
+/* ==============================
+Medium devices (640px and larger)
+================================= */
+@media only screen and (min-width: 640px) {
+  header {
+  text-align: unset;
+  padding: 20px 0 13px;
+}
+nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+  .col-md-6 {
+  width: 50%;
+}
+}
+/* ==============================
+Large devices (1024px or larger)
+================================= */
+@media only screen and (min-width: 1024px) {
+}
+/* ==============================
+X-large devices (1440px or larger)
+================================= */
+@media only screen and (min-width: 1440px) {
+}
+/* ==============================
+Extra-large devices (1920px or larger)
+================================= */
+@media only screen and (min-width: 1920px) {
+}
+.Centeralign {text-align: center;}
+
+[class*="col-"] {
+  float: left;padding: 20px
+}
