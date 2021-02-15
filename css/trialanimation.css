@@ -1,0 +1,29 @@
+@keyframes crossrotate {
+  {transform: rotate(90deg);}
+
+}
+
+.Cross {
+  animation-duration: 4s;
+  animation-name: crossrotate;
+  animation-iteration-count: infinite;
+
+}
+body {
+  background-color: #F0F0F0;
+
+}
+
+@keyframes crossmove{
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.Cross {
+  animation-duration: 30s;
+  animation-name: crossmove;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+
+}

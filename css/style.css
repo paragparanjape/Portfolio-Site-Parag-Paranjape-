@@ -72,7 +72,8 @@ a:focus {
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid #994c30; /* width of the border, type, color */
-  transition: 0.2s opacity;
+  transition: 0.2s ;
+    transition-property: opacity;
 }
 .button:hover {
   opacity: 0.8; /* Reduces the opacity of the button to 80% */
@@ -106,8 +107,9 @@ selector {
   content: "";
   clear: both;
   display: table;
+  }
 }
-}
+
 #work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
 #hero h1 {
   text-align: center; /* Centers text */
@@ -131,7 +133,7 @@ nav > ul > li > a {
   display: inline-block;
   width: 100%;
 }
-svg {width:5%;height:auto}
+svg {width:50%;height:auto}
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -147,12 +149,34 @@ nav {
   }
   .col-md-6 {
   width: 50%;
+
 }
+
 }
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
+  header {
+  text-align: unset;
+  padding: 20px 0 13px;
+}
+nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
+  .col-md-7 {
+  width: 60%;
+}
+.col-md-5 {
+width: 40%;
+}
+.container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
 }
 /* ==============================
 X-large devices (1440px or larger)
@@ -167,5 +191,59 @@ Extra-large devices (1920px or larger)
 .Centeralign {text-align: center;}
 
 [class*="col-"] {
-  float: left;padding: 20px
+  float: right;padding: 20px
+}
+.sun {
+  animation-duration: 4s;
+  animation-name: color-change;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes color-change {
+  from {fill: #edc655;}
+  to {fill: #f76414;}
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.cloud-front {
+  animation-duration: 30s;
+  animation-name: cloud-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes crossrotate {
+  {transform: rotate(90deg);}
+
+}
+
+.Cross {
+  animation-duration: 4s;
+  animation-name: crossrotate;
+  animation-iteration-count: infinite;
+
+}
+body {
+  background-color: #F0F0F0;
+
+}
+
+@keyframes crossmove{
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.Cross {
+  animation-duration: 30s;
+  animation-name: crossmove;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+
 }
